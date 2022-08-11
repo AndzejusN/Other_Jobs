@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+    nginx:
+        build: ./nginx/
+        container_name: laravel-nfq-nginx
+        working_dir: /home/student
+        ports:
+            - 8080:80
+        volumes:
+            - ./src:/home/student
+    php:
+        build: ./php/
+        container_name: laravel-nfq-php
+        working_dir: /home/student
+        volumes: 
+            - ./src:/home/student
+        env_file:
+            - ./src/.env
+    db:
+        container_name: laravel-nfq-db
+        image: mariadb:10.6.5
+        env_file:
+            - ./mysql/.env
+        volumes:
+            - ./mysql/data:/var/lib/mysql
+        ports:
+            - 3336:3306

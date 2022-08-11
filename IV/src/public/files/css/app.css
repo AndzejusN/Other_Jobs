@@ -1,0 +1,40 @@
+body {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 200;
+    background-color: white;
+}
+
+main {
+    height: 101%;
+    width: 100%;
+    margin: 100px 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 200;
+    background-color: white;
+}
+
+img {
+    height: 50px;
+    width: 450px
+}
+
+.active {
+    border-top: solid blueviolet 2px;
+    border-bottom: solid blueviolet 2px;
+}
